@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My JavaScript App</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+<section  class="inputContainer flex materialuishadow">
+    <form class="formContainer flex materialuishadow">
+        <label class="flex">
+            <input type="seach" placeholder="Enter the place" class="inputBox materialuishadow"/>
+            <div class="inputbutton materialuishadow">search</div>
+        </label>
+        <div>
+            <div class="cat">Categories</div>
+            <div class="flex jc">
+                <lable class="prel"><input class="checkBox" type="checkbox"><label>pubs</label></lable>
+                <lable class="prel"><input class="checkBox" type="checkbox">Restaurants</lable>
+                <lable class="prel"><input class="checkBox" type="checkbox">clubs</lable>
+                <lable class="prel"><input class="checkBox" type="checkbox">Library</lable>
+            </div>
+        </div>
+    </form>
+</section>
+<section id="map"></section>
+<script src="./script.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Tzw55z02ruMcMkMBoFnesRL8hSSGQ1k&callback=initMap">
+</script>
+</body>
+</html>
