@@ -1,7 +1,7 @@
-# jsboilerplate
-A boilerplate created for easy use for creating projects ..!
+# Cardiff NeighbourHood Map 
+A project based on the understanding of google api and good brushing up of JavaScript Concepts .
 
-# Specialities , 
+# Api Details  , 
 - `Babel env ` , `webpack 3`, `Scss to css`,`Html`, `Images `
 
 # commands  
