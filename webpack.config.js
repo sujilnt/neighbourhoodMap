@@ -49,7 +49,7 @@ module.exports = env => {
     config.plugins = [
         shouldClean,
         new CopyPlugin([{ context: './images', from: '**/*', to: dist + '/images' }]),
-        new CopyPlugin([{ from: './index.html', to: dist }]),
+        new CopyPlugin([{ from: '../index.html', to: dist }]),
         new ExtractTextPlugin('style.css'),
     ];
     return config;
