@@ -13,4 +13,5 @@ function initMap() {
     });
 }
 window.initMap = initMap;
-console.log("map file",window , window.google);
+
+
