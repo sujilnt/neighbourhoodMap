@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/webpack --env.production",
-    "dev": "yarn build && ./node_modules/.bin/webpack-dev-server"
+    "dev": "yarn build && ./node_modules/.bin/webpack-dev-server --https --key ./server.key --cert ./server.crt  --cacert ./server.csr"
   },
   "author": "Sujil Anto <sujilnt@gmail.com>",
   "license": "ISC",
@@ -29,5 +29,8 @@
     "webpack": "v3.10.0",
     "webpack-dev-server": "^2.4.5"
   },
-  "repository": "https://github.com/sujilnt/jsboilerplate.git"
+  "repository": "https://github.com/sujilnt/jsboilerplate.git",
+  "dependencies": {
+    "file-system": "^2.2.2"
+  }
 }

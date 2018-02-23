@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const { join } = require('path');
 const pathTo = path => join(__dirname, path);
 const config = { module: {} };
+const fs =require("fs");
 
 // paths
 const dist = pathTo('./dist');

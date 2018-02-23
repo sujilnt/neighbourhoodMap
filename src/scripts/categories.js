@@ -1,3 +1,4 @@
+import apiCallduringOnCheck from "./data/data.api.js"
 const categoryId=document.getElementById("categories");
 let value=`<div class="cat">Categories</div>
             <div class="flex jc">
@@ -27,3 +28,5 @@ function elementBind(e){
 const fetchingMapQuery=function(arr){
     console.log("array",arr);
 }
+
+export default fetchingMapQuery();
