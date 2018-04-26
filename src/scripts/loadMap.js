@@ -1,4 +1,3 @@
-import categories from "./categories.js";
 import requesthandle from "./request.js";
 function initMap() {
     //currentLocation() : - Its basically used to Identify thr User Location , it returns an Object.
@@ -33,10 +32,10 @@ const radioButtonfunction =function (map,uluru){
     const categoryId=document.getElementById("categories");
     let value=`<div class="cat">Categories</div>
             <div class="flex jc">
-                <lable class="prel" for="pub" ><input class="checkBox" type="checkbox" value="pub" id="pub" onChanges="elementBind(this)"><label for="pub">pubs</label></lable>
-                <lable class="prel" for="restaurants"><input class="checkBox" type="checkbox" id="restaurants" value="restaurants" ><label for="restaurants">Restaurants</label></lable>
-                <lable class="prel" for="clubs"><input class="checkBox" type="checkbox" id="clubs"><label>clubs</label></lable>
-                <lable class="prel" for="library"><input class="checkBox" type="checkbox" id="library"><label>Library</label></lable>
+                <label class="prel" for="pub" ><input class="checkBox" name="query" type="radio" value="pub" id="pub" onChanges="elementBind(this)"><label for="pub">pubs</label></label>
+                <label class="prel" for="restaurants"><input class="checkBox" name="query" type="radio" id="restaurants" value="restaurants" ><label for="restaurants">Restaurants</label></label>
+                <label class="prel" for="clubs"><input class="checkBox" name="query" type="radio" id="clubs" value="clubs"><label>clubs</label></label>
+                <label class="prel" for="library"><input class="checkBox" name="query" type="radio" id="library" value="library"><label>Library</label></label>
             </div>
 `;
     categoryId.innerHTML=value;
@@ -57,7 +56,10 @@ const radioButtonfunction =function (map,uluru){
         fetchingMapQuery(checkBoxArr);
     };
     const fetchingMapQuery=function(arr){
-        console.log(arr);
+        var  map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: uluru
+        });
         requesthandle(map,uluru,arr);
     }
 }

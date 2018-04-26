@@ -12,11 +12,11 @@ const handlingRequerst = (map,uluru,keywordArray=['restaurants']) =>{
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
                 // adding markers to each element
-                createMarker(results[i]);
+                createMarker(results[i],i,results);
             }
         }
     }
-    const createMarker=(data)=>{
+    const createMarker=(data,i,collectiondata)=>{
         let  marker = new google.maps.Marker({
             map: map,
             icon: data.image,
