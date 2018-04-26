@@ -32,18 +32,23 @@ const radioButtonfunction =function (map,uluru){
     const categoryId=document.getElementById("categories");
     let value=`<div class="cat">Categories</div>
             <div class="flex jc">
-                <label class="prel" for="pub" ><input class="checkBox" name="query" type="radio" value="pub" id="pub" onChanges="elementBind(this)"><label for="pub">pubs</label></label>
-                <label class="prel" for="restaurants"><input class="checkBox" name="query" type="radio" id="restaurants" value="restaurants" ><label for="restaurants">Restaurants</label></label>
-                <label class="prel" for="clubs"><input class="checkBox" name="query" type="radio" id="clubs" value="clubs"><label>clubs</label></label>
-                <label class="prel" for="library"><input class="checkBox" name="query" type="radio" id="library" value="library"><label>Library</label></label>
+                <label class="prel" for="pub" ><input class="checkBox" name="query" type="radio" value="pub" id="store" onChanges="elementBind(this)"><label for="pub">store</label></label>
+                <label class="prel" for="restaurants"><input class="checkBox" name="query" type="radio" id="restaurant" value="restaurants" onChanges="elementBind(this)" ><label for="restaurants">Restaurants</label></label>
+                <label class="prel" for="clubs"><input class="checkBox" name="query" type="radio" id="night_club" value="casino" onChanges="elementBind(this)"><label for="casino">clubs</label></label>
+                <label class="prel" for="library"><input class="checkBox" name="query" type="radio" id="library" value="library" onChanges="elementBind(this)"><label for="library">Library</label></label>
+                <label class="prel" for="college"><input class="checkBox" name="query" type="radio" id="university" value="university" onChanges="elementBind(this)"><label for="college">college</label></label>
+                <label class="prel" for="hospital"><input class="checkBox" name="query" type="radio" id="hospital" value="hospital" onChanges="elementBind(this)"><label for="hosipital">clinic</label></label>
+                <label class="prel" for="bank"><input class="checkBox" name="query" type="radio" id="bank" value="bank" onChanges="elementBind(this)"><label for="bank">bank</label></label>
+ 
             </div>
 `;
     categoryId.innerHTML=value;
     categoryId.addEventListener("change",elementBind,false);
 
-    const checkBoxArr=[];
+
 // adding one eventListener for all the checkboxes
     function elementBind(e){
+        const checkBoxArr=[];
         let eventtarget=e.target;
         if(eventtarget!== e.currentTarget){
             if(eventtarget.checked){
@@ -56,6 +61,7 @@ const radioButtonfunction =function (map,uluru){
         fetchingMapQuery(checkBoxArr);
     };
     const fetchingMapQuery=function(arr){
+        console.log(arr);
         var  map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: uluru

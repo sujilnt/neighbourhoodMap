@@ -1,5 +1,5 @@
 import populateInfoWindow from "./createStreetView.js";
-const handlingRequerst = (map,uluru,keywordArray=['restaurants']) =>{
+const handlingRequerst = (map,uluru,keywordArray=['movie_theater']) =>{
     let infowindow=new google.maps.InfoWindow();
     let service = new google.maps.places.PlacesService(map);
     var request = {
@@ -7,9 +7,11 @@ const handlingRequerst = (map,uluru,keywordArray=['restaurants']) =>{
         radius: '1000',
         type: keywordArray
     };
+    console.log("inside", keywordArray, request.type);
     service.nearbySearch(request, callback);
     function callback(results,status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
+            console.log("results",results);
             for (var i = 0; i < results.length; i++) {
                 // adding markers to each element
                 createMarker(results[i],i,results);
