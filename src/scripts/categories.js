@@ -29,4 +29,3 @@ const fetchingMapQuery=function(arr){
     console.log("array",arr);
 }
 
-export default fetchingMapQuery();
