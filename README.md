@@ -1,4 +1,4 @@
-# Cardiff NeighbourHood Map 
+# NeighbourHood Map 
 A project based on the understanding of google api and good brushing up of JavaScript Concepts .
 
 # Api Details  , 
