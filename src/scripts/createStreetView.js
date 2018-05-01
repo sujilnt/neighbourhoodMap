@@ -22,7 +22,7 @@ const populateInfoWindow=(marker, infowindow)=>{
                     position: nearStreetViewLocation,
                     pov: {
                         heading: 34,
-                        pitch: 30
+                        pitch: 10
                     }
                 };
                 var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
