@@ -7,7 +7,7 @@ A project based on the understanding of google api and good brushing up of JavaS
 screenshot of the query from the Neighbourhood Map !
 ![alt text](https://github.com/sujilnt/neighbourhoodMap/blob/master/maps.png)
 # commands  
-- `yarn dev`
+- `yarn run dev`
 - `yarn build`
 
 # server running 
